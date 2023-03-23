@@ -1,0 +1,57 @@
+@import "./utils/variables";
+@import "./layouts/header";
+
+.body{
+    margin: 0;
+    padding: 0;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;   
+}
+
+.form{
+    background: $beige;
+    padding-bottom:57px ;
+
+    &_searchField{
+        color:$grey ;
+        background:$lightgrey ;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+         
+
+        &-btn{
+            font-size: 16px;
+            border:none;
+            padding:13px 0px 13px 13px;
+            outline: none;
+            background: fixed;
+        }
+        
+    }
+    &_heading{
+        font-size:calc($font-size + 4px);
+        padding-top: 25px;
+    }
+    &_byline{
+        font-weight:300 ;
+        font-size:calc($font-size - 2px);
+    }
+    &_button{
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        background: $buttongradient;
+        &-btn{
+            font-size: calc($font-size - 4px);
+            border:none;
+            padding:13px 19px ;
+        }  
+
+    }
+}

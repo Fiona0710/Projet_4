@@ -1,0 +1,20 @@
+.submit{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-size: $font-size - 4;
+    border:none;
+    padding:13px 19px ;
+    color: white;
+    background: $buttongradient;    
+    } 
+    
+.filters{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    font-size: $font-size - 4;
+    border:none;
+    padding-top:28px  ;
+    padding-bottom: 28px;
+    padding-left: 13px;
+    background:$filters-bg;
+}    

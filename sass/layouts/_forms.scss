@@ -1,0 +1,30 @@
+.form{
+    background:$bg;
+    padding-bottom:57px ;
+    text-align: center;
+    &_field{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color:$darker-bg ;
+        background:$light-bg;
+        width: 100%;
+        &-search{
+            font-size:$font-size - 4;
+            border:none;
+            padding:13px 0px 13px 0px;
+            outline: none;
+            background: fixed;
+            text-align: center;
+        }    
+    }
+.heading{
+    font-size:$font-size + 4;
+    padding-top:25px;
+}
+.byline{
+    font-weight:300 ;
+    font-size:$font-size - 2;
+}  
+}

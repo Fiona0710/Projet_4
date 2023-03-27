@@ -1,0 +1,6 @@
+
+@mixin box-shadow($offset-x: 0px, $offset-y: 4px,  $blur:15px ,$color:rgba(0, 0, 0, 0.15)){
+    box-shadow:$offset-x $offset-y $blur $color ;
+    border:none;
+    font-size: $font-size;
+}

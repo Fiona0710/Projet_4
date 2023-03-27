@@ -1,58 +1,17 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/typography";
 @import "./layouts/forms";
 @import "./layouts/header";
 @import "./components/buttons";
+@import "./base/standards";
+@import "./pages/operation";
 
 
 
-.body{
-    margin: 0;
-    padding: 0;
-    max-width: 768px;
-    display: flex;
-    flex-direction: column;   
-}
-.sectOperation{
-    padding-left:20px ;
-    padding-right:20px ;
-    padding-top:48px ;
-    padding-bottom:68px ;
-    height: 440px;
-    ol{
-     padding: 0;
-     display: flex;
-     flex-direction: column;
-     height: auto;
-     gap:10%;
-      .li-style {
-	       list-style-type: none;
-	       counter-increment: selection;
-           margin-left:10px ;
-           display: flex;
-           flex-direction: row;
-           align-items: center;
-           gap: 10%;
-           &::before {
-                content: counter(selection); 
-                padding:4px 8px ;
-                margin-right: 8px;
-                background:$primary; 
-                border-radius: 50px;
-                font-size:$font-size - 6;
-                color :white;
-                position: absolute;
-                left:3%;		
-            }
-            .i{
-                padding-left:5% ;
-                color:$dark-bg;
-              }
-        }
-    
-    }
 
-}
+
+
 
 
 

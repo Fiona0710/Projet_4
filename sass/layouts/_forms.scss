@@ -11,7 +11,7 @@
         background:$light-bg;
         width: 100%;
         &-search{
-            font-size:$font-size - 4;
+            font-size:$font-size;
             border:none;
             padding:13px 0px 13px 0px;
             outline: none;
@@ -19,12 +19,12 @@
             text-align: center;
         }    
     }
-.heading{
-    font-size:$font-size + 4;
-    padding-top:25px;
-}
-.byline{
-    font-weight:300 ;
-    font-size:$font-size - 2;
-}  
+    &_heading{
+        font-size:$font-size + 8;
+        padding-top:25px;
+    }
+    &_byline{
+        font-weight:300 ;
+        font-size:$font-size + 2;
+    }  
 }

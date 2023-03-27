@@ -1,0 +1,38 @@
+.operation{
+    padding:48px 20px 68px 20px;
+    height: 440px;
+    .operation_heading{
+        margin: 0;
+    }
+    .operation_list{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     height: 90%;
+     padding: 0;
+    }
+    .operation_list>li{
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+	       list-style-type: none;
+	       counter-increment: selection;
+           margin-left:10px ;
+           gap: 10%;
+           &::before {
+                content: counter(selection); 
+                padding:4px 8px ;
+                margin-right: 8px;
+                background:$primary; 
+                border-radius: 50px;
+                font-size:$font-size -2 ;
+                color :white;
+                position: absolute;
+                left:3%;		
+            }
+    }        
+    .operation_btn>i{
+        padding-left:5% ;
+        color:$dark-bg;
+    }          
+}

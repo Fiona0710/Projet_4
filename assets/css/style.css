@@ -24,11 +24,11 @@
   background: fixed;
   text-align: center;
 }
-.form .heading {
+.form_heading {
   font-size: 24px;
   padding-top: 25px;
 }
-.form .byline {
+.form_byline {
   font-weight: 300;
   font-size: 18px;
 }
@@ -37,6 +37,10 @@
   padding-top: 14px;
   padding-bottom: 5px;
   text-align: center;
+  z-index: 1;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  font-size: 16px;
 }
 .header .header_heading {
   display: inline-flex;
@@ -46,22 +50,20 @@
 
 .submit {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  font-size: 16px;
   border: none;
-  padding: 13px 19px;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 13px 16px;
   color: white;
   background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
-.filters {
+.operation_btn {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  font-size: 16px;
   border: none;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  padding-left: 13px;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 28px 0px 28px 13px;
   background: #f7f7f7;
 }
 
@@ -73,41 +75,41 @@
   flex-direction: column;
 }
 
-.sectOperation {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 48px;
-  padding-bottom: 68px;
+.operation {
+  padding: 48px 20px 68px 20px;
   height: 440px;
 }
-.sectOperation ol {
-  padding: 0;
+.operation .operation_heading {
+  margin: 0;
+}
+.operation .operation_list {
   display: flex;
   flex-direction: column;
-  height: auto;
-  gap: 10%;
+  justify-content: space-around;
+  height: 90%;
+  padding: 0;
 }
-.sectOperation ol .li-style {
-  list-style-type: none;
-  counter-increment: selection;
-  margin-left: 10px;
+.operation .operation_list > li {
   display: flex;
   flex-direction: row;
   align-items: center;
+  list-style-type: none;
+  counter-increment: selection;
+  margin-left: 10px;
   gap: 10%;
 }
-.sectOperation ol .li-style::before {
+.operation .operation_list > li::before {
   content: counter(selection);
   padding: 4px 8px;
   margin-right: 8px;
   background: #9356dc;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 16px -2;
   color: white;
   position: absolute;
   left: 3%;
 }
-.sectOperation ol .li-style .i {
+.operation .operation_btn > i {
   padding-left: 5%;
   color: #7e7e7e;
 }

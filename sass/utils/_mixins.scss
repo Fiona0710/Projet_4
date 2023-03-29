@@ -1,6 +1,10 @@
 
-@mixin box-shadow($offset-x: 0px, $offset-y: 4px,  $blur:15px ,$color:rgba(0, 0, 0, 0.15)){
+@mixin box-shadow($offset-x: 0px, $offset-y: 4px,  $blur:15px ,$color:rgba(0, 0, 0, 0.15) ,$font:$font-size){
     box-shadow:$offset-x $offset-y $blur $color ;
     border:none;
-    font-size: $font-size;
+    font-size: $font;
+}
+@mixin flex-direction($display:flex ,$direction:column){
+    display:$display;
+    flex-direction:$direction;
 }

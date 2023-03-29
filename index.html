@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-        <link href="https : //fonts.googleapis.com/css2?family= Shrikhand & display=swap" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <title>0hmyfood</title>
     </head>
     <body class="body">
@@ -25,26 +25,64 @@
             </svg>
         </header>
         <main>
-            <form class="form" method="get" action="">
+            <form class="form" method="get" action="traitement.php">
                 <div class="form_field">
                 <i class="fa-solid fa-location-dot"></i>
-                <input class=" form_field-search" type="search" id="district" name="q" placeholder="Paris, Belleville" autofocus required/>
+                <input class=" form_field-search" type="search" id="district" name="q" placeholder="Paris, Belleville" autofocus required>
                 </div>
                 <h1 class="form_heading">Réservez le menu qui vous convient</h1>
                 <p class="form_byline">Découvrez des restaurants d'exception sélectionnés par nos soins</p>
                 <input class="submit" type="submit" value="Explorer nos restaurants">
             </form>
             <section class="operation">
-                <h1 class="operation_heading">Fonctionnement</h1>
+                <h2 class="operation_heading">Fonctionnement</h2>
                 <ol class="operation_list">
                     <li class="operation_btn"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
                     <li class="operation_btn" ><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
                     <li class="operation_btn"><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                 </ol>
             </section>
-            <section>
-
+            <section class="eatery">
+                <h2 class="eatery_title">Restaurants</h2>
+                <div class="eatery_cards">
+                    <article class="card">
+                        <button class="btn-new">Nouveau</button>
+                        <img src="assets/images/restaurants/La-palette-du-gout.jpg" alt="Photo d'un plat du restaurant La palette du goût">
+                        <div class="card_content">
+                            <h3 class="card_title">La palette du goût</h3>
+                            <p class="card_byline">Ménilmontant</p>
+                            <i class="card_heart fa-regular fa-heart"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <button class="btn-new">Nouveau</button>
+                        <img src="assets/images/restaurants/La-note-enchantee.jpg" alt="Photo d'un plat du restaurant La note enchantée">
+                        <div class="card_content">
+                            <h3 class="card_title">La note enchantée</h3>
+                            <p class="card_byline">Charonne</p>
+                            <i class="card_heart fa-regular fa-heart"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="assets/images/restaurants/A-la-francaise.jpg" alt="Photo d'un plat du restaurant À la française">
+                        <div class="card_content">
+                            <h3 class="card_title">À la française</h3>
+                            <p class="card_byline">Cité Rouge</p>
+                            <i class="card_heart fa-regular fa-heart"></i>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="assets/images/restaurants/Le-delice-des-sens.jpg" alt="Photo d'un plat du restaurant Le délice des sens">
+                        <div class="card_content">
+                            <h3 class="card_title">Le délice des sens</h3>
+                            <p class="card_byline">Folie-Méricourt</p>
+                            <i class=" fa-regular fa-heart card_heart"></i>
+                        </div>
+                    </article>
+                </div>
+                
             </section>
+            
         </main>
         <footer>
 

@@ -1,12 +1,13 @@
-$primary: #9356dc;
-$filters-hover:#f5edff;
-$secondary:#ff79da;
-$tertiary: #99e2d0;
-$dark-tertiary:#008766;
-$bg:#d2d2d2;
+$primary: hsl(267, 66%, 60%);
+$filters-hover:adjust-color($color:$primary, $saturation: 34%, $lightness: 36%);
+$secondary:hsl(317, 100%, 74%);
+$tertiary: hsl(165, 56%, 74%);
+$dark-tertiary:adjust-color($color:$tertiary, $saturation: 44%, $lightness: - 48%);
+$bg:hsl(0, 0%, 82%);
+@debug 'valeur du background:#{$bg }';
 $filters-bg:lighten($bg, 14.5);
 $light-bg:lighten($bg, 9.5);
-$dark-bg:darken($bg, 33%);
+$dark-bg:darken($bg, 33);
 $darker-bg:darken($bg, 61.75);
 $buttongradient:linear-gradient(200.64deg, $primary -5.2%, $secondary 110.74%);
 

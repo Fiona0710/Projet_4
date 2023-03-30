@@ -3,7 +3,8 @@
     border-radius: 25px;
     padding:13px 16px ;
     color: white;
-    background: $buttongradient;    
+    background: $buttongradient;  
+    cursor: pointer; 
     } 
     
 .operation_btn{
@@ -11,6 +12,12 @@
     border-radius: 20px;
     padding:28px 0px  28px 13px;
     background:$filters-bg;
+    &:hover{
+        background:$filters-hover ;
+        & >i{
+            color: $primary;
+        }
+    }
 }    
 
 .btn-new{

@@ -1,0 +1,29 @@
+.footer{
+    background: $darker-bg;
+    padding:22px 25px;
+    & , a{
+     color:white ;  
+    } 
+    &_heading{
+        font-family:'Shrikhand'; 
+        font-size:$font-size + 2px ;
+        font-style: italic;
+        font-weight: 400; 
+        margin:0;
+        padding-bottom: 6px;
+    }
+    & li{
+        padding-top:10px ;   
+    }
+    &_list{
+        @include list;
+    }
+    &_icon-one{
+        font-size:$font-size;
+        padding-right:10px;
+    }
+    &_icon-two{
+        font-size:$font-size - 3px;
+        padding-right:8px ;
+    }       
+}

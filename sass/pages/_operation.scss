@@ -5,20 +5,15 @@
         margin: 0;
     }
     .operation_list{
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
+     @include flex-direction($justify-content:space-around);
      height: 90%;
      padding: 0;
     }
     .operation_list>li{
-           display: flex;
-           flex-direction: row;
-           align-items: center;
-	       list-style-type: none;
+           @include flex-direction($direction:row, $align-i:center);
+	       @include list($padding:28px 0px  28px 13px, $margin:0px 0px 0px 10px );
 	       counter-increment: selection;
-           margin-left:10px ;
-           gap: 10%;
+           gap:10%;
            &::before {
                 content: counter(selection); 
                 padding:4px 8px ;
@@ -28,7 +23,7 @@
                 font-size:$font-size - 2px;
                 color :white;
                 position: absolute;
-                left:3%;		
+                left:-10px;		
             }
     }        
     .operation_btn>i{

@@ -3,10 +3,7 @@
     padding-bottom:57px ;
     text-align: center;
     &_field{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-direction($direction:row, $justify-content:center, $align-i:center );
         color:$darker-bg ;
         background:$light-bg;
         width: 100%;

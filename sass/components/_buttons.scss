@@ -8,9 +8,9 @@
     } 
     
 .operation_btn{
+    position: relative;
     @include box-shadow($color:rgba(0, 0, 0, 0.15));
     border-radius: 20px;
-    padding:28px 0px  28px 13px;
     background:$filters-bg;
     &:hover{
         background:$filters-hover ;

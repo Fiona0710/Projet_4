@@ -5,17 +5,20 @@
     font-size: $font;
     @debug'valeur de shadow:#{$offset-x $offset-y $blur $color}';
 }
-@mixin flex-direction($display:flex ,$direction:column){
-    display:$display;
+@mixin flex-direction($direction:column, $justify-content:null, $align-c:null , $align-i:null ){
+    display:flex;
     flex-direction:$direction;
+    justify-content:$justify-content;
+    align-content:$align-c;
+    align-items:$align-i;
 }
 @mixin link($color:black){
     color:$color;
     text-decoration: none;	   
 }
 
-@mixin list{
+@mixin list($padding:0px 0px 0px 0px , $margin:0px 0px 0px 0px){
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding:$padding;
+    margin:$margin;
 }

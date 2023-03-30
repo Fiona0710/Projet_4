@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   font-family: "Roboto";
 }
 
 .form {
-  background: #d2d2d2;
+  background: hsl(0, 0%, 82%);
   padding-bottom: 57px;
   text-align: center;
 }
@@ -12,8 +13,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #353535;
-  background: #eaeaea;
+  color: #343434;
+  background: #e9e9e9;
   width: 100%;
 }
 .form_field-search {
@@ -56,6 +57,11 @@
   flex-direction: column;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .operation {
   padding: 48px 20px 68px 20px;
   height: 440px;
@@ -83,7 +89,7 @@
   content: counter(selection);
   padding: 4px 8px;
   margin-right: 8px;
-  background: #9356dc;
+  background: hsl(267, 66%, 60%);
   border-radius: 50px;
   font-size: 16px -2px;
   color: white;
@@ -92,12 +98,12 @@
 }
 .operation .operation_btn > i {
   padding-left: 5%;
-  color: #7e7e7e;
+  color: #7d7d7d;
 }
 
 .eatery {
   padding: 54px 20px;
-  background: #d2d2d2;
+  background: hsl(0, 0%, 82%);
   display: flex;
   flex-direction: column;
 }
@@ -145,7 +151,7 @@
 }
 .card_heart:hover {
   font-weight: 900;
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(200.64deg, hsl(267, 66%, 60%) -5.2%, hsl(317, 100%, 74%) 110.74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -159,7 +165,8 @@
   border-radius: 25px;
   padding: 13px 16px;
   color: white;
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(200.64deg, hsl(267, 66%, 60%) -5.2%, hsl(317, 100%, 74%) 110.74%);
+  cursor: pointer;
 }
 
 .operation_btn {
@@ -168,7 +175,13 @@
   font-size: 16px;
   border-radius: 20px;
   padding: 28px 0px 28px 13px;
-  background: #f7f7f7;
+  background: #f6f6f6;
+}
+.operation_btn:hover {
+  background: #f4ebff;
+}
+.operation_btn:hover > i {
+  color: hsl(267, 66%, 60%);
 }
 
 .btn-new {
@@ -177,13 +190,45 @@
   top: 5%;
   z-index: 1;
   display: inline-block;
-  background: #99e2d0;
-  color: #008766;
+  background: hsl(165, 56%, 74%);
+  color: #008563;
   padding: 7px 9px 6px 9px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border: none;
   font-size: 14px;
+}
+
+.footer {
+  background: #343434;
+  padding: 22px 25px;
+}
+.footer, .footer a {
+  color: white;
+}
+.footer_heading {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 6px;
+}
+.footer li {
+  padding-top: 10px;
+}
+.footer_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer_icon-one {
+  font-size: 16px;
+  padding-right: 10px;
+}
+.footer_icon-two {
+  font-size: 13px;
+  padding-right: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

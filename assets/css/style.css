@@ -38,11 +38,17 @@
   padding-bottom: 5px;
   text-align: center;
   z-index: 1;
+  position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border: none;
   font-size: 16px;
 }
-.header .header_heading {
+.header_arrow {
+  position: absolute;
+  left: 23px;
+  top: 24px;
+}
+.header_heading {
   display: inline-flex;
   width: 162px;
   height: 44px;
@@ -144,10 +150,10 @@ a {
   font-size: 17px;
 }
 .card_heart {
-  font-size: 21px;
-  position: absolute;
   top: 40%;
   right: 8%;
+  font-size: 21px;
+  position: absolute;
 }
 .card_heart:hover {
   font-weight: 900;
@@ -206,11 +212,13 @@ a {
 .footer, .footer a {
   color: white;
 }
+.footer_position {
+  position: relative;
+  top: -40px;
+}
 .footer_heading {
   font-family: "Shrikhand";
   font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
   margin: 0;
   padding-bottom: 6px;
 }
@@ -229,6 +237,86 @@ a {
 .footer_icon-two {
   font-size: 13px;
   padding-right: 8px;
+}
+
+.menu-image {
+  object-fit: cover;
+  height: 275px;
+  width: 100%;
+}
+
+.menu {
+  border-radius: 40px 40px 0px 0px;
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
+  padding: 32px 13px 40px 13px;
+  background-color: #f6f6f6;
+  height: auto;
+}
+.menu_leading {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  margin: 0;
+  padding-left: 4px;
+  display: inline-block;
+}
+.menu_heart {
+  font-size: 21px;
+  position: absolute;
+  top: 40px;
+  right: 41px;
+}
+.menu_heart:hover {
+  font-weight: 900;
+  background: linear-gradient(200.64deg, hsl(267, 66%, 60%) -5.2%, hsl(317, 100%, 74%) 110.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.menu_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu_part {
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  margin-bottom: 0;
+}
+.menu_part--border {
+  border-bottom: 3px solid hsl(165, 56%, 74%);
+  width: 40px;
+}
+.menu_btn {
+  background: #FFFFFF;
+  padding: 12px 13.5px 12px 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.menu_btn--police {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+.menu_btn--direction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 15px;
+  padding-top: 5px;
+}
+.menu_btn--direction > * {
+  margin: 0;
+}
+.menu_btn--fontweight {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

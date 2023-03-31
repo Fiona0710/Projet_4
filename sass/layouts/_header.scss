@@ -3,12 +3,18 @@
     padding-bottom: 5px;
     text-align: center;
     z-index: 1;
+    position: relative;
     @include box-shadow($offset-y:2px,$blur:4px,$color:rgba(0, 0, 0, 0.15));
-    
-    .header_heading{
+    &_arrow{
+        position: absolute;
+        left:23px;
+        top: 24px;
+    }
+    &_heading{
         display: inline-flex;
         width: 162px; 
         height: 44px; 
        
     }
+
 }

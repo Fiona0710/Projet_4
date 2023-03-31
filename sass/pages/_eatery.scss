@@ -35,17 +35,8 @@
         font-size:$font-size + 1px;
     }
     &_heart{
-        font-size:$font-size + 5px;
-        position: absolute;
         top:40%;
         right:8%;
-        &:hover{
-            font-weight: 900;
-            background:$buttongradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-background-clip: text;
-            -moz-text-fill-color: transparent;
-        }      
+        @include heart;
     }     
 }

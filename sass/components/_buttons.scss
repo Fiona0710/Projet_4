@@ -2,16 +2,39 @@
     @include box-shadow($blur:10px ,$color:rgba(0, 0, 0, 0.25) );
     border-radius: 25px;
     padding:13px 16px ;
-    color: white;
-    background: $buttongradient;  
-    cursor: pointer; 
+    color: $white;
+    background: $submit-color;  
+    cursor: pointer;
+    &:hover{
+    background:$submit-color-hover;
+    @include box-shadow($color:rgba(0, 0, 0, 0.35))
     } 
+} 
     
 .operation_btn{
     position: relative;
     @include box-shadow($color:rgba(0, 0, 0, 0.15));
     border-radius: 20px;
     background:$lighter-bg;
+    @include flex-direction($direction:row, $align-i:center);
+	@include list($padding:28px 0px  28px 13px, $margin:0px 0px 0px 10px );
+	counter-increment: selection;
+    gap:10%;
+    & >i{
+        padding-left:5% ;
+        color:$dark-bg;   
+    }          
+    &::before {
+        content: counter(selection); 
+        padding:4px 8px ;
+        margin-right: 8px;
+        background:$primary; 
+        border-radius: 50px;
+        font-size:$font-size - 2px;
+        color :$white;
+        position: absolute;
+        left:-10px;		
+    }
     &:hover{
         background:$filters-hover ;
         & >i{
@@ -20,15 +43,21 @@
     }
 }    
 
-.btn-new{
-    position:absolute;
-    right:3%;
-    top: 5%;
-    z-index: 1;
-    display: inline-block;
-    background:$tertiary ;
-    color:$dark-tertiary;
-    padding:7px 9px 6px 9px;
-    border-radius: 2px;
-    @include box-shadow($offset-y:2px , $blur:4px ,$font:$font-size - 2px);   
-}
+.dish_check{
+    @include slide($translateX:translate(102%));
+    @include flex-direction ($justify-content:center,$align-i:center);
+    background: $tertiary;
+    border-radius: 0px 15px 15px 0px;
+    position: absolute;
+    height: 69px;
+    width: 59px;
+    right:0;
+    bottom: 81px;
+    margin-bottom: -81px;
+    &--icon{
+        border-radius:50%;
+        color:$tertiary;
+        padding: 2px 3px;
+        background-color:$white;    
+    }                   
+}   

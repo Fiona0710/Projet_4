@@ -1,0 +1,20 @@
+.operation_heading , .eatery_heading{
+    padding-bottom: 26px;
+}
+.operation{
+    padding:48px 20px 68px 20px;
+    &_list{
+        @include flex-direction;
+        gap:25px;
+    }
+}
+
+.eatery{
+    padding:54px 20px 66px 20px;
+    background:$bg;
+    @include flex-direction;
+    &_cards {
+    @include flex-direction;
+    gap: 20px;
+    } 
+}    

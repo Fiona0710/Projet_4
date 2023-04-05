@@ -3,14 +3,26 @@ $filters-hover:adjust-color($color:$primary, $saturation: 34%, $lightness: 36%);
 $secondary:hsl(317, 100%, 74%);
 $tertiary: hsl(165, 56%, 74%);
 $dark-tertiary:adjust-color($color:$tertiary, $saturation: 44%, $lightness: - 48%);
-$bg:hsl(0, 0%, 82%);
-@debug 'valeur du background:#{$bg }';
-$lighter-bg:lighten($bg, 14.5);
-$light-bg:lighten($bg, 9.5);
-$dark-bg:darken($bg, 33);
-$darker-bg:darken($bg, 61.75);
-@debug 'valeur des bg:#{$lighter-bg $light-bg $dark-bg $darker-bg}';
-$buttongradient:linear-gradient(200.64deg, $primary -5.2%, $secondary 110.74%);
+
+//Couleur intermediaire entre le blanc et le noir pour créer un nuancier de gris//
+$base-color: hsla(0, 0%, 50%);
+
+$white:lighten($base-color, 50);
+$lighter-bg:lighten($base-color,47);
+$light-bg:lighten($base-color,42);
+$bg:lighten($base-color,32);
+  
+$dark-bg:darken($base-color,1);
+$darker-bg:darken($base-color,29);
+$light-black:darken($base-color,44);
+$black:darken($base-color,50);
+
+@debug 'valeur des bg:#{$lighter-bg $light-bg $bg $dark-bg $darker-bg $light-black}';
+
+// Couleur du dégradé du bouton submit //
+$submit-color:linear-gradient(200.64deg, $primary -5.2%, $secondary 110.74%);
+$submit-color-hover:linear-gradient(0deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15)),
+                    $submit-color;
 
 
 

@@ -1,0 +1,30 @@
+.like{
+    @include flex-direction ($direction:row ,$justify-content:space-between, $align-i:center);
+    &_heart , &_heart-solid{
+        transition: all 500ms ease-in-out ;
+        cursor: pointer;
+    }    
+    &_heart{
+        @include heart;
+        padding-right:27px;
+        &--padding{
+            padding-right:0 ;
+        }   
+    }
+    &_heart-solid{
+        &--right{
+            right: 25px; 
+        }
+        @include heart($pos:absolute);
+        right:40px;
+        opacity:0;
+        background:$submit-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        &:hover{
+            opacity:1 ;    
+        }           
+    }
+}

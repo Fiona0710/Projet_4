@@ -1,22 +1,31 @@
 .like{
-    @include flex-direction ($direction:row ,$justify-content:space-between, $align-i:center);
-    &_heart , &_heart-solid{
+    @include flex-direction ($direction:row ,$justify-c:space-between, $align-i:center);
+    &--desktop{
+        @include desktop{
+            @include flex-direction ($direction:row ,$justify-c:center, $align-i:center);
+            gap:24px;
+        }
+    }   
+}
+.heart{
+    position: relative;
+    &_empty , &_solid{
         transition: all 500ms ease-in-out ;
         cursor: pointer;
     }    
-    &_heart{
+    &_empty{
         @include heart;
         padding-right:27px;
         &--padding{
             padding-right:0 ;
         }   
     }
-    &_heart-solid{
+    &_solid{
         &--right{
-            right: 25px; 
+            right: 25px;    
         }
         @include heart($pos:absolute);
-        right:40px;
+        right:27px;
         opacity:0;
         background:$submit-color;
         -webkit-background-clip: text;

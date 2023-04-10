@@ -9,11 +9,17 @@
 }
 
 .body{
-    max-width: 768px;
-    @include flex-direction;  
+  max-width: 768px;
+  @include flex-direction; 
+  @include desktop{
+  max-width: 1440px;
+  }
 }
+ 
 
 a{
-    @include link; 
+  @include link; 
 }
+
+  
 

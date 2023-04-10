@@ -29,6 +29,11 @@
   font-size: 24px;
   padding: 39.5px 39.5px 10px;
 }
+@media only screen and (min-width:768.1px) {
+  .form_heading {
+    font-size: 40px;
+  }
+}
 .form_byline {
   font-weight: 300;
   font-size: 18px;
@@ -83,6 +88,11 @@
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width:768.1px) {
+  .body {
+    max-width: 1440px;
+  }
+}
 
 a {
   color: black;
@@ -100,6 +110,12 @@ a {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  width: 100%;
+}
+@media only screen and (min-width:768.1px) {
+  .operation_list {
+    flex-direction: row;
+  }
 }
 
 .eatery {
@@ -108,10 +124,31 @@ a {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (min-width:768.1px) {
+  .eatery a {
+    width: 45%;
+  }
+}
 .eatery_cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media only screen and (min-width:768.1px) {
+  .eatery_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
+
+@media only screen and (min-width:768.1px) {
+  .operation, .eatery {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
 }
 
 .like {
@@ -120,22 +157,35 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.like_heart, .like_heart-solid {
+@media only screen and (min-width:768.1px) {
+  .like--desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.heart {
+  position: relative;
+}
+.heart_empty, .heart_solid {
   transition: all 500ms ease-in-out;
   cursor: pointer;
 }
-.like_heart {
+.heart_empty {
   font-size: 21px;
   position: relative;
   padding-right: 27px;
 }
-.like_heart--padding {
+.heart_empty--padding {
   padding-right: 0;
 }
-.like_heart-solid {
+.heart_solid {
   font-size: 21px;
   position: absolute;
-  right: 40px;
+  right: 27px;
   opacity: 0;
   background: linear-gradient(200.64deg, hsl(267, 66%, 60%) -5.2%, hsl(317, 100%, 74%) 110.74%);
   -webkit-background-clip: text;
@@ -143,10 +193,10 @@ a {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-.like_heart-solid--right {
+.heart_solid--right {
   right: 25px;
 }
-.like_heart-solid:hover {
+.heart_solid:hover {
   opacity: 1;
 }
 
@@ -178,6 +228,50 @@ a {
 .card_byline {
   font-weight: 300;
   font-size: 17px;
+}
+
+.dish_card {
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 16px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  height: 69px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.dish_card:active .dish_check {
+  margin-right: 0;
+}
+.dish_card:active .dish_entitled--font-w {
+  margin-right: 59px;
+}
+
+.dish_entitled {
+  padding: 12px 0px 12px 12px;
+  font-weight: 300;
+  font-size: 15px;
+  overflow: hidden;
+}
+.dish_entitled > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish_entitled--font-w-s {
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.dish_entitled--font-w {
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  transition: all 500ms 200ms ease-in-out;
 }
 
 .label-new {
@@ -227,6 +321,7 @@ a {
   margin: 0px 0px 0px 10px;
   counter-increment: selection;
   gap: 10%;
+  width: 100%;
 }
 .operation_btn > i {
   padding-left: 5%;
@@ -250,39 +345,20 @@ a {
   color: hsl(267, 66%, 60%);
 }
 
-.dish_check {
-  transition: transform 500ms 100ms ease-in-out;
-  transform: translate(102%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: hsl(165, 56%, 74%);
-  border-radius: 0px 15px 15px 0px;
-  position: absolute;
-  height: 69px;
-  width: 59px;
-  right: 0;
-  bottom: 81px;
-  margin-bottom: -81px;
-}
-.dish_check--icon {
-  border-radius: 50%;
-  color: hsl(165, 56%, 74%);
-  padding: 2px 3px;
-  background-color: white;
-}
-
 .footer {
   background: #363636;
   padding: 22px 25px;
 }
+@media only screen and (min-width:768.1px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 64px 57px 30px;
+  }
+}
 .footer, .footer a {
   color: white;
-}
-.footer_position {
-  position: relative;
-  top: -40px;
 }
 .footer_heading {
   font-family: "Shrikhand";
@@ -290,13 +366,37 @@ a {
   font-weight: 400;
   padding-bottom: 6px;
 }
+@media only screen and (min-width:768.1px) {
+  .footer_heading {
+    padding-bottom: 0px;
+    padding-left: 50px;
+  }
+}
 .footer li {
   padding-top: 10px;
+}
+@media only screen and (min-width:768.1px) {
+  .footer li {
+    padding-top: 0;
+  }
+  .footer li:nth-last-child(2) ::before {
+    content: "";
+    width: 30px;
+    display: inline-flex;
+  }
 }
 .footer_list {
   list-style-type: none;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+}
+@media only screen and (min-width:768.1px) {
+  .footer_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 .footer_icon-one {
   font-size: 16px;
@@ -314,6 +414,13 @@ a {
   padding: 32px 13px 40px 13px;
   background-color: #f7f7f7;
   height: auto;
+  overflow: hidden;
+}
+@media only screen and (min-width:768.1px) {
+  .eatery-menu {
+    margin-left: 13.5%;
+    margin-right: 13.5%;
+  }
 }
 .eatery-menu_leading {
   font-family: "Shrikhand";
@@ -325,6 +432,12 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+@media only screen and (min-width:768.1px) {
+  .eatery-menu_flex {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
 .eatery-menu_part {
   font-weight: 300;
@@ -339,48 +452,26 @@ a {
   width: 40px;
 }
 
-.dish_title {
-  background: white;
-  padding-left: 15px;
-  padding-right: 13.5px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border: none;
-  font-size: 16px;
-  border-radius: 15px;
-  position: relative;
-  cursor: pointer;
-  height: 69px;
-  overflow: hidden;
-}
-.dish_title:hover .dish_title--fontweight {
-  transform: translateX(-74px);
-}
-.dish_title:hover .dish_check {
-  transform: translateX(0);
-}
-.dish_title--police {
-  font-weight: 500;
-  font-size: 18px;
-  padding-top: 12px;
-}
-.dish_title--police, .dish_title p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.dish_title--direction {
+.dish_check {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 300;
-  font-size: 15px;
-  padding-top: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: hsl(165, 56%, 74%);
+  border-radius: 0px 15px 15px 0px;
+  height: 100%;
+  width: 59px;
+  position: absolute;
+  right: 0;
+  margin-bottom: -81px;
+  margin-right: -59px;
+  transition: all 500ms 200ms ease-in-out;
 }
-.dish_title--fontweight {
-  font-weight: 700;
-  padding-left: 20px;
-  transition: transform 500ms 100ms ease-in-out;
-  transform: translateX(0);
+.dish_check--icon {
+  border-radius: 50%;
+  color: hsl(165, 56%, 74%);
+  padding: 2px 3px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

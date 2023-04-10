@@ -1,0 +1,42 @@
+.dish_card{
+    background:$white;
+    @include box-shadow($color:rgba(0, 0, 0, 0.1));
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    height: 69px;
+    overflow: hidden;
+    @include flex-direction($direction:null ,$justify-c:space-between);
+    &:active{
+        & .dish_check{
+           margin-right: 0; 
+        }
+        & .dish_entitled--font-w{
+           margin-right:59px;
+        }
+    }
+}                      
+.dish_entitled{
+    padding:12px 0px 12px 12px;
+    font-weight: 300;
+    font-size: 15px;
+    overflow: hidden;
+    & > *{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &--font-w-s{
+        font-weight: 500;
+        font-size: $font-size + 2px; 
+        padding-bottom: 5px;
+
+    }   
+    &--font-w{
+        font-weight: 700;
+        @include flex-direction($direction:null ,$align-i:flex-end);
+        padding:16px;
+        transition: all 500ms 200ms ease-in-out;
+    }
+} 
+

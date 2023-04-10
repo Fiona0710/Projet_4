@@ -3,7 +3,7 @@
     padding-bottom:57px ;
     text-align: center;
     &_field{
-        @include flex-direction($direction:row, $justify-content:center, $align-i:center );
+        @include flex-direction($direction:row, $justify-c:center, $align-i:center );
         color:$darker-bg ;
         background:$light-bg;
         width: 100%;
@@ -18,7 +18,10 @@
     }
     &_heading{
         font-size:$font-size + 8;
-        padding: 39.5px 39.5px 10px
+        @include desktop{
+            font-size:$font-size + 24;
+        }
+        padding: 39.5px 39.5px 10px;
     }
     &_byline{
         font-weight:300 ;

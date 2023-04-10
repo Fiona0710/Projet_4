@@ -1,0 +1,55 @@
+.dish_title{
+    background:$white;
+    @include box-shadow($color:rgba(0, 0, 0, 0.1));
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    height: 69px;
+    overflow: hidden;
+    display: flex;
+    &:hover{
+        & .dish_check{
+           margin-right: 0; 
+        }
+    }
+    &--police{
+        font-weight: 500;
+        font-size: $font-size + 2px; 
+        padding-bottom: 5px;
+    }
+    &--police , p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }  
+    &--fontweight{
+        font-weight: 700;
+        padding-left:20px ;
+        display: flex;
+        align-items: flex-end;
+        margin-left:auto;
+        padding:16px 16px 16px 0;
+    }       
+}            
+.dish_direction{
+    padding:12px 0px 12px 12px;
+    font-weight: 300;
+    font-size: 15px;
+    overflow: hidden;
+}  
+.dish_check{
+    @include flex-direction ($justify-content:center,$align-i:center);
+    background: $tertiary;
+    border-radius: 0px 15px 15px 0px;
+    height: 69px;
+    width: 59px;
+    margin-right:-59px;
+    transition: all 500ms ease-in-out;
+    &--icon{
+        border-radius:50%;
+        color:$tertiary;
+        padding: 2px 3px;
+        background-color:$white;    
+    }                   
+}   

@@ -20,6 +20,7 @@
 	@include list($padding:28px 0px  28px 13px, $margin:0px 0px 0px 10px );
 	counter-increment: selection;
     gap:10%;
+    width:100%;
     & >i{
         padding-left:5% ;
         color:$dark-bg;   
@@ -42,22 +43,3 @@
         }
     }
 }    
-
-.dish_check{
-    @include slide($translateX:translate(102%));
-    @include flex-direction ($justify-content:center,$align-i:center);
-    background: $tertiary;
-    border-radius: 0px 15px 15px 0px;
-    position: absolute;
-    height: 69px;
-    width: 59px;
-    right:0;
-    bottom: 81px;
-    margin-bottom: -81px;
-    &--icon{
-        border-radius:50%;
-        color:$tertiary;
-        padding: 2px 3px;
-        background-color:$white;    
-    }                   
-}   

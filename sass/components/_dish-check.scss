@@ -1,0 +1,18 @@
+.dish_check{
+    @include flex-direction ($justify-c:center,$align-i:center);
+    background: $tertiary;
+    border-radius: 0px 15px 15px 0px;
+    height:100%;
+    width: 59px;
+    position: absolute;
+    right:0;
+    margin-bottom:-81px;
+    margin-right:-59px;
+    transition: all 500ms 200ms ease-in-out;
+    &--icon{
+        border-radius:50%;
+        color:$tertiary;
+        padding: 2px 3px;
+        background-color:$white;    
+    }                   
+}   

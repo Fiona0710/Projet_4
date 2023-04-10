@@ -5,10 +5,10 @@
     font-size: $font;
     @debug'valeur de shadow:#{$offset-x $offset-y $blur $color}';
 }
-@mixin flex-direction($direction:column, $justify-content:null, $align-c:null , $align-i:null ){
+@mixin flex-direction($direction:column, $justify-c:null, $align-c:null , $align-i:null ){
     display:flex;
     flex-direction:$direction;
-    justify-content:$justify-content;
+    justify-content:$justify-c;
     align-content:$align-c;
     align-items:$align-i;
 }
@@ -22,7 +22,7 @@
     padding:$padding;
     margin:$margin;
 }
-@mixin heart($pos:relative , $f-s:$font-size + 5px){
+@mixin heart($pos:relative, $f-s:$font-size + 5px){
     font-size:$f-s;
     position:$pos;    
 }
@@ -33,7 +33,10 @@
     height:$height;
 }
 
-@mixin slide($duration:500ms, $delay:100ms, $timing-function:ease-in-out,$translateX:translateX(0)){
-    transition:transform $duration $delay $timing-function;
-    transform:$translateX;  
-}
+
+// Media queries//
+@mixin desktop{
+    @media #{$breakpoints}{
+        @content;
+    }
+} 

@@ -1,25 +1,44 @@
 .footer{
     background: $darker-bg;
     padding:22px 25px;
-    & , a{
-     color:$white ;  
+    @include desktop{
+        @include flex-direction($direction:row-reverse, $align-i:center);
+        padding:64px 57px 30px ;
     }
-    &_position{
-       position: relative;
-       top:-40px;
-
-    } 
+    & , a{
+        color:$white ;
+    }
     &_heading{
         font-family:'Shrikhand'; 
         font-size:$font-size + 2px;
         font-weight: 400;
         padding-bottom: 6px;
+        @include desktop{
+            padding-bottom: 0px;
+            padding-left:50px ;
+        }
     }
     & li{
-        padding-top:10px ;   
+        padding-top:10px ;
+        @include desktop{
+            padding-top: 0;
+            &:nth-last-child(2){
+                & ::before{
+                    content:"";
+                    width:30px;
+                    display: inline-flex;
+                }     
+            }   
+
+        }  
     }
     &_list{
         @include list;
+        @include desktop{
+            @include flex-direction($direction:null ,$justify-c:center);
+            flex-wrap:wrap ;
+            gap: 10px;
+        }   
     }
     &_icon-one{
         font-size:$font-size;
@@ -27,6 +46,6 @@
     }
     &_icon-two{
         font-size:$font-size - 3px;
-        padding-right:8px ;
+        padding-right:8px ;    
     }       
 }

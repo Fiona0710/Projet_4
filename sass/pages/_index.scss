@@ -6,6 +6,10 @@
     &_list{
         @include flex-direction;
         gap:25px;
+        width: 100%;
+        @include desktop{
+            flex-direction: row;
+        }
     }
 }
 
@@ -13,8 +17,24 @@
     padding:54px 20px 66px 20px;
     background:$bg;
     @include flex-direction;
+    & a {
+       @include desktop{
+            width: 45%;
+       } 
+    }
     &_cards {
-    @include flex-direction;
-    gap: 20px;
+        @include flex-direction;
+        gap: 20px;
+        @include desktop{
+            @include flex-direction($direction:row, $justify-c:space-between);
+            flex-wrap: wrap;
+            gap: 50px;
+        }
     } 
 }    
+.operation , .eatery{
+    @include desktop{
+        padding-left:12.5%;
+        padding-right:12.5%;  
+    }
+}

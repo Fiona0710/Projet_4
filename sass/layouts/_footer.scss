@@ -23,11 +23,7 @@
         @include desktop{
             padding-top: 0;
             &:nth-last-child(2){
-                & ::before{
-                    content:"";
-                    width:30px;
-                    display: inline-flex;
-                }     
+                margin-left: 30px;
             }   
 
         }  

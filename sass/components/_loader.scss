@@ -1,5 +1,5 @@
 .wrapper-loader{
-  background:$bg repeat;
+  background:$light-bg;
   width:100%;
   height:100%;
   z-index:3;
@@ -7,7 +7,7 @@
   @include flex-direction($justify-c:center,$align-i:center);
   animation:scale  100ms 3s ease-out forwards;
   .loader{
-        @include box-shadow($blur:20px ,$color:rgba(0, 0, 0, 0.35) );
+        @include box-shadow($blur:20px ,$color:rgba(0, 0, 0, 0.35));
         width: 350px;
         height: 350px;
         border:28px dotted;
@@ -29,7 +29,7 @@
             width: 70%;
             height: 70%;
             border-radius:50%;
-            border:2px solid $bg ;
+            border:2px solid $light-bg;
             @include desktop{
                 border-width:3px;
             }

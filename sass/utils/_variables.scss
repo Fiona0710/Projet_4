@@ -13,8 +13,7 @@ $base-color: hsla(0, 0%, 50%);
 $white:lighten($base-color, 50);
 $lighter-bg:lighten($base-color,47);
 $light-bg:lighten($base-color,42);
-$bg:lighten($base-color,32);
-  
+ 
 $dark-bg:darken($base-color,1);
 $darker-bg:darken($base-color,29);
 $light-black:darken($base-color,44);
@@ -27,7 +26,7 @@ $submit-color-hover:linear-gradient(0deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 1
 
 
 // Variables pour le responsive //
-$screen-large:"only screen and (min-width:768.1px)";
-$breakpoints:$screen-large;
+$breakpoint-screen-large:"only screen and (min-width:768.1px)";
+
                     
 

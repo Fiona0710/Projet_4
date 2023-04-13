@@ -36,7 +36,7 @@
 
 // Media queries//
 @mixin desktop{
-    @media #{$breakpoints}{
+    @media #{$breakpoint-screen-large}{
         @content;
     }
 } 

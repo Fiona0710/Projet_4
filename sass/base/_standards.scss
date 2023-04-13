@@ -11,12 +11,8 @@
 .body{
   width: 100%;
   height: 100%;
-  max-width: 768px;
   @include flex-direction; 
-  @include desktop{
-  max-width: 1440px;
-  margin:auto;
-  } 
+  @include desktop;
 }
  
 

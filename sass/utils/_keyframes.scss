@@ -1,0 +1,43 @@
+// Animation menu//
+
+@keyframes progress-dish{
+    from{
+        transform:scaleX(0) ;
+        opacity:.1 ;
+    }
+    to{
+        opacity: 1;
+        transform:scaleX(1);
+    }
+}
+
+//Animation loader//
+
+@keyframes anim{
+    to{
+        stroke-dashoffset:0 ;
+        fill-opacity:1 ;
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);    
+    }
+    to{
+        transform: rotate(360deg);    
+    }    
+}
+@keyframes scale{
+    from{
+           transform: scale(1);
+           
+    }
+    to{
+            
+           
+          transform: scale(0);
+    }    
+}
+
+

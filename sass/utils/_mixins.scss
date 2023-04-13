@@ -40,3 +40,14 @@
         @content;
     }
 } 
+
+// Boucle custimisable pour faire apparaitre plusieurs éléments en cascade//
+@mixin progress($from:2, $through:4, $delay:500ms, $tr-or:left, $key:progress-dish, $dur:1.5s){
+    @for $i from $from through $through{
+        &:nth-child(#{$i}) { 
+            animation-delay:($i *$delay);
+        }
+    }
+    transform-origin:$tr-or;
+    animation:$key $dur ease-in-out both;
+} 

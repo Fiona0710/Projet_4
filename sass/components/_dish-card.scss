@@ -1,3 +1,4 @@
+
 .dish_card{
     background:$white;
     @include box-shadow($color:rgba(0, 0, 0, 0.1));
@@ -7,7 +8,8 @@
     height: 69px;
     overflow: hidden;
     @include flex-direction($direction:null ,$justify-c:space-between);
-    &:active{
+    @include progress;
+    &:hover{
         & .dish_check{
            margin-right: 0; 
         }
@@ -15,7 +17,11 @@
            margin-right:59px;
         }
     }
-}                      
+} 
+
+
+
+
 .dish_entitled{
     padding:12px 0px 12px 12px;
     font-weight: 300;
@@ -36,7 +42,7 @@
         font-weight: 700;
         @include flex-direction($direction:null ,$align-i:flex-end);
         padding:16px;
-        transition: all 500ms 200ms ease-in-out;
+        transition: all 400ms ease-in-out;
     }
 } 
 

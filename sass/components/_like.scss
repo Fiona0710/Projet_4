@@ -10,7 +10,7 @@
 .heart{
     position: relative;
     &_empty , &_solid{
-        transition: all 500ms ease-in-out ;
+        transition: all 400ms ease-in-out ;
         cursor: pointer;
     }    
     &_empty{

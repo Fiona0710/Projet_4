@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./base/typography";
 @import "./layouts/forms";
 @import "./layouts/header";
@@ -8,14 +9,13 @@
 @import "./components/like";
 @import "./components/img-menu";
 @import "./components/eatery-card";
-@import "./components/dish-card";
 @import "./components/label-new";
 @import "./components/buttons";
 @import "./layouts/footer";
 @import "./layouts/menu";
 @import "./components/dish-check";
-
-
+@import "./components/dish-card";
+@import "./components/loader";
 
  
 

@@ -21,6 +21,7 @@
 	counter-increment: selection;
     gap:10%;
     width:100%;
+    cursor: pointer;
     & >i{
         padding-left:5% ;
         color:$dark-bg;   

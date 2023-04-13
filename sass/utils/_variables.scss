@@ -1,8 +1,11 @@
 $primary: hsl(267, 66%, 60%);
+$light-primary:hsl(282, 77%, 64%);
 $filters-hover:adjust-color($color:$primary, $saturation: 34%, $lightness: 36%);
 $secondary:hsl(317, 100%, 74%);
+$light-secondary:hsl(317, 85%, 81%);
 $tertiary: hsl(165, 56%, 74%);
 $dark-tertiary:adjust-color($color:$tertiary, $saturation: 44%, $lightness: - 48%);
+
 
 //Couleur intermediaire entre le blanc et le noir pour créer un nuancier de gris//
 $base-color: hsla(0, 0%, 50%);

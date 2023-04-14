@@ -1,12 +1,12 @@
 .operation_heading , .eatery_heading{
-    padding-bottom: 26px;
+    padding-bottom: toRem(26);
 }
 .operation{
-    padding:48px 20px 68px 20px;
+    padding:toRem(48) toRem(20) toRem(68) toRem(20);
     &_list{
         @include flex-direction;
-        gap:25px;
-        width: 100%;
+            gap:toRem(25);
+            width: 100%;
         @include desktop{
             flex-direction: row;
         }
@@ -14,9 +14,8 @@
 }
 
 .eatery{
-    padding:54px 20px 66px 20px;
+    padding:toRem(54) toRem(20) toRem(66) toRem(20);
     background:$lighter-bg;
-    @include flex-direction;
     & a {
        @include desktop{
             width: 45%;
@@ -24,17 +23,27 @@
     }
     &_cards {
         @include flex-direction;
-        gap: 20px;
+            gap:toRem(20);
         @include desktop{
             @include flex-direction($direction:row, $justify-c:space-between);
-            flex-wrap: wrap;
-            gap: 50px;
+                flex-wrap: wrap;
+                gap:toRem(50);
         }
     } 
 }    
 .operation , .eatery{
+    @include flex-direction($align-i:center);
     @include desktop{
         padding-left:12.5%;
         padding-right:12.5%;  
+    }
+}
+
+.width-max{
+    width: 100%;
+    max-width:toRem(1440);
+    @include flex-direction($align-i:stretch);
+    &_footer{
+        @include flex-direction($direction:row-reverse, $align-i:center);
     }
 }

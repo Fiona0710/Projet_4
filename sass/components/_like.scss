@@ -3,29 +3,29 @@
     &--desktop{
         @include desktop{
             @include flex-direction ($direction:row ,$justify-c:center, $align-i:center);
-            gap:24px;
+            gap:toRem(24);
         }
     }   
 }
 .heart{
     position: relative;
     &_empty , &_solid{
-        transition: all 400ms ease-in-out ;
+        @include trans;
         cursor: pointer;
+        font-size:toRem(21) ;
     }    
     &_empty{
-        @include heart;
-        padding-right:27px;
+        padding-right:toRem(27);
         &--padding{
             padding-right:0 ;
         }   
     }
     &_solid{
         &--right{
-            right: 25px;    
+            right: toRem(25);    
         }
-        @include heart($pos:absolute);
-        right:27px;
+        position:absolute;
+        right:toRem(27);
         opacity:0;
         background:$submit-color;
         -webkit-background-clip: text;

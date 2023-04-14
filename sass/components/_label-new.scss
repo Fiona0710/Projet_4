@@ -6,7 +6,7 @@
     display: inline-block;
     background:$tertiary ;
     color:$dark-tertiary;
-    padding:7px 9px 6px 9px;
-    border-radius: 2px;
-    @include box-shadow($offset-y:2px , $blur:4px ,$font:$font-size - 2px);   
+    padding:toRem(7) toRem(9) toRem(6) toRem(9);
+    border-radius:toRem(2);
+    @include box-shadow($offset-y:toRem(2) , $blur:toRem(4) ,$font:toRem(14));   
 }

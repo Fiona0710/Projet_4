@@ -1,29 +1,29 @@
 .footer{
     background: $darker-bg;
-    padding:22px 25px;
+    padding:toRem(22) toRem(25);
     @include desktop{
-        @include flex-direction($direction:row-reverse, $align-i:center);
-        padding:64px 57px 30px ;
+        @include flex-direction($justify-c:center, $align-i:center);
+        padding:toRem(64) toRem(57) toRem(30);
     }
     & , a{
         color:$white ;
     }
     &_heading{
         font-family:'Shrikhand'; 
-        font-size:$font-size + 2px;
+        font-size:toRem(18);
         font-weight: 400;
-        padding-bottom: 6px;
+        padding-bottom: toRem(6);
         @include desktop{
-            padding-bottom: 0px;
-            padding-left:50px ;
+            padding-bottom: 0;
+            padding-left:toRem(50) ;
         }
     }
     & li{
-        padding-top:10px ;
+        padding-top:toRem(10) ;
         @include desktop{
-            padding-top: 0;
+            padding-top:0;
             &:nth-last-child(2){
-                margin-left: 30px;
+                margin-left: toRem(30);
             }   
 
         }  
@@ -33,15 +33,14 @@
         @include desktop{
             @include flex-direction($direction:null ,$justify-c:center);
             flex-wrap:wrap ;
-            gap: 10px;
+            gap: toRem(10);
         }   
     }
     &_icon-one{
-        font-size:$font-size;
-        padding-right:10px;
+        padding-right:toRem(10);
     }
     &_icon-two{
-        font-size:$font-size - 3px;
-        padding-right:8px ;    
+        font-size:toRem(13);
+        padding-right:toRem(8) ;    
     }       
 }

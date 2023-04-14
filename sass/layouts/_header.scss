@@ -1,19 +1,19 @@
 .header{
-    padding-top:14px ;
-    padding-bottom: 5px;
-    text-align: center;
+    padding-top:toRem(14) ;
+    padding-bottom:toRem(5);
+    text-align:center;
     z-index: 1;
-    position: relative;
-    @include box-shadow($offset-y:2px,$blur:4px,$color:rgba(0, 0, 0, 0.15));
+    position:relative;
+    @include box-shadow($offset-y:toRem(2),$blur:toRem(4),$color:rgba(0, 0, 0, 0.15));
     &_arrow{
         position: absolute;
-        left:23px;
-        top: 24px;
+        left:toRem(23);
+        top:toRem(24);
     }
     &_heading{
-        display: inline-flex;
-        width: 162px; 
-        height: 44px; 
+        display:inline-flex;
+        width:toRem(162); 
+        height:toRem(44); 
        
     }
 

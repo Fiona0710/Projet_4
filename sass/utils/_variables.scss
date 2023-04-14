@@ -1,3 +1,6 @@
+// ***** Variables for colors ***** //
+
+// Primary colors used and their gradients //
 $primary: hsl(267, 66%, 60%);
 $light-primary:hsl(282, 77%, 64%);
 $filters-hover:adjust-color($color:$primary, $saturation: 34%, $lightness: 36%);
@@ -7,25 +10,23 @@ $tertiary: hsl(165, 56%, 74%);
 $dark-tertiary:adjust-color($color:$tertiary, $saturation: 44%, $lightness: - 48%);
 
 
-//Couleur intermediaire entre le blanc et le noir pour créer un nuancier de gris//
+//Intermediate color between white and black to create a gray color chart//
 $base-color: hsla(0, 0%, 50%);
 
+// Gray swatch //
 $white:lighten($base-color, 50);
 $lighter-bg:lighten($base-color,47);
 $light-bg:lighten($base-color,42);
- 
 $dark-bg:darken($base-color,1);
 $darker-bg:darken($base-color,29);
 $light-black:darken($base-color,44);
 $black:darken($base-color,50);
 
-// Couleur du dégradé du bouton submit //
+// Submit button gradient color //
 $submit-color:linear-gradient(200.64deg, $primary -5.2%, $secondary 110.74%);
-$submit-color-hover:linear-gradient(0deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15)),
-                    $submit-color;
-
-
-// Variables pour le responsive //
+$submit-color-hover:linear-gradient(0deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15)),$submit-color;
+                    
+// ***** Variables for the responsive ***** //
 $breakpoint-screen-large:"only screen and (min-width:768.1px)";
 
                     

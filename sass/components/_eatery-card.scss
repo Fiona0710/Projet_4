@@ -1,20 +1,19 @@
 .card {
     background:$white;
     @include box-shadow($color:rgba(0, 0, 0, 0.1));
-    transition: 0.3s;
-    height:251px ;
-    border-radius: 15px;
+    height:toRem(251) ;
+    border-radius: toRem(15);
     position: relative;
     & img {
-        border-radius: 15px 15px 0 0 ;
+        border-radius: toRem(15) toRem(15) 0 0 ;
         @include img ;
     }
     &_content{
-        padding:10px 25px 10px 10px;
+        padding:toRem(10) toRem(25) toRem(10) toRem(10);
     } 
     &_byline{
         font-weight: 300;
-        font-size:$font-size + 1px;
+        font-size:toRem(17);
     }
     
 }

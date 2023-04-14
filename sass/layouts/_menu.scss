@@ -1,8 +1,8 @@
 .eatery-menu{
-    border-radius: 40px 40px 0px 0px;
+    border-radius: toRem(40) toRem(40) 0 0;
     position: relative;
-    margin-top:- 40px;
-    padding:32px 13px 40px 13px;
+    margin-top:toRem(- 40);
+    padding:toRem(32) toRem(13) toRem(40) toRem(13);
     background-color:$lighter-bg;
     height: auto;
     overflow: hidden;
@@ -12,13 +12,13 @@
     }
     &_leading{
         font-family: 'Shrikhand';
-        font-size:$font-size + 12px;
+        font-size:toRem(28);
         color:$light-black;
-        padding-left:4px;
+        padding-left:toRem(4);
     }
     &_flex{
         @include flex-direction;
-        gap:12px ;
+            gap:toRem(12) ;
         @include desktop{
             margin-left:20% ;
             margin-right:20% ;
@@ -26,14 +26,14 @@
     }
     &_part{
         font-weight: 300;
-        font-size:$font-size;
+        font-size:toRem(16);
         text-transform: uppercase;
-        padding-bottom:6px;
-        margin-bottom: 12px;
-        margin-top: 40px;
+        padding-bottom:toRem(6);
+        margin-bottom:toRem(12);
+        margin-top:toRem(40);
         &--border{
-            border-bottom:3px solid $tertiary;
-            width: 40px;
+            border-bottom:toRem(3) solid $tertiary;
+            width:toRem(40);
         }
     }    
     

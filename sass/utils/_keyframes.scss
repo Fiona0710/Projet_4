@@ -1,5 +1,6 @@
-// Animation menu//
+// ***** Animation ***** //
 
+// Successive appearance of menus //
 @keyframes progress-dish{
     from{
         transform:scaleX(0) ;
@@ -11,15 +12,15 @@
     }
 }
 
-//Animation loader//
-
-@keyframes anim{
+// Appearance of the stroke and the background of the "ohmyfood" svg //
+@keyframes svg{
     to{
         stroke-dashoffset:0 ;
         fill-opacity:1 ;
     }
 }
 
+// Loader rotation //
 @keyframes rotate {
     from{
         transform: rotate(0deg);    
@@ -28,6 +29,8 @@
         transform: rotate(360deg);    
     }    
 }
+
+// Disappearance of the loader //
 @keyframes scale{
     from{
         transform: scale(1);      

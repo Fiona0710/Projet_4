@@ -1,10 +1,13 @@
+// ***** Mixins ***** //
 
-@mixin box-shadow($offset-x: 0px, $offset-y: 4px,  $blur:15px ,$color:rgba(0, 0, 0, 0.15) ,$font:$font-size){
+// Customizable mixin for different shades //
+@mixin box-shadow($offset-x: 0, $offset-y:toRem(4),  $blur:toRem(15) ,$color:rgba(0, 0, 0, 0.15) ,$font:toRem(16)){
     box-shadow:$offset-x $offset-y $blur $color ;
     border:none;
-    font-size: $font;
-    @debug'valeur de shadow:#{$offset-x $offset-y $blur $color}';
+    font-size:$font;
 }
+
+// Customizable flexbox mixin //
 @mixin flex-direction($direction:column, $justify-c:null, $align-c:null , $align-i:null ){
     display:flex;
     flex-direction:$direction;
@@ -12,42 +15,51 @@
     align-content:$align-c;
     align-items:$align-i;
 }
+
+// Mixin to remove customizable text-decoration for link color //
 @mixin link($color:$black){
     color:$color;
     text-decoration: none;	   
 }
 
-@mixin list($padding:0px 0px 0px 0px , $margin:0px 0px 0px 0px){
+// Mixin to remove customizable list style for padding and margin //
+@mixin list($padding:0 0 0 0 , $margin:0 0 0 0){
     list-style-type: none;
     padding:$padding;
     margin:$margin;
 }
-@mixin heart($pos:relative, $f-s:$font-size + 5px){
-    font-size:$f-s;
-    position:$pos;    
-}
 
+// Customizable mixin to adapt the width and height of the block as well as the adjustment of the image in relation to it //
 @mixin img($object-fit:cover ,$width:100% ,$height:70%){
     object-fit:$object-fit;
     width:$width;
     height:$height;
 }
 
+// Customizable loop to display several cascading elements //
+@mixin progress($from:2, $through:4, $delay:500ms, $tr-or:left, ){
+    @for $i from $from through $through{
+        &:nth-child(#{$i}) { 
+            animation-delay:($i *$delay);
+            transform-origin:$tr-or;
+        }
+    }
+    @include anim;   
+} 
 
-// Media queries//
+// Customizable mixin for animation //
+@mixin anim($key:progress-dish, $dur:1.5s, $delay:null, $timming:ease-in-out, $fill:both ){
+    animation:$key $dur $delay $timming $fill;    
+}
+
+// Customizable mixin for transition //
+@mixin trans($property:all, $dur:400ms, $delay:null, $timming:ease-in-out ){
+    transition:$property, $dur, $delay, $timming;
+}
+
+// Media queries for desktop //
 @mixin desktop{
     @media #{$breakpoint-screen-large}{
         @content;
     }
-} 
-
-// Boucle custimisable pour faire apparaitre plusieurs éléments en cascade//
-@mixin progress($from:2, $through:4, $delay:500ms, $tr-or:left, $key:progress-dish, $dur:1.5s){
-    @for $i from $from through $through{
-        &:nth-child(#{$i}) { 
-            animation-delay:($i *$delay);
-        }
-    }
-    transform-origin:$tr-or;
-    animation:$key $dur ease-in-out both;
 } 

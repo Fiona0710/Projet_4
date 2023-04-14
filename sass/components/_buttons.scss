@@ -1,7 +1,7 @@
 .submit{
-    @include box-shadow($blur:10px ,$color:rgba(0, 0, 0, 0.25) );
-    border-radius: 25px;
-    padding:13px 16px ;
+    @include box-shadow($blur:toRem(10) ,$color:rgba(0, 0, 0, 0.25) );
+    border-radius:toRem(25);
+    padding:toRem(13) toRem(16);
     color: $white;
     background: $submit-color;  
     cursor: pointer;
@@ -12,12 +12,12 @@
 } 
     
 .operation_btn{
-    position: relative;
     @include box-shadow($color:rgba(0, 0, 0, 0.15));
-    border-radius: 20px;
-    background:$lighter-bg;
     @include flex-direction($direction:row, $align-i:center);
-	@include list($padding:28px 0px  28px 13px, $margin:0px 0px 0px 10px );
+	@include list($padding:toRem(28) 0 toRem(28) toRem(13), $margin:0 0 0 toRem(10));
+    position: relative;
+    border-radius: toRem(20);
+    background:$lighter-bg;
 	counter-increment: selection;
     gap:10%;
     width:100%;
@@ -28,14 +28,14 @@
     }          
     &::before {
         content: counter(selection); 
-        padding:4px 8px ;
-        margin-right: 8px;
+        padding:toRem(4) toRem(8) ;
+        margin-right: toRem(8);
         background:$primary; 
-        border-radius: 50px;
-        font-size:$font-size - 2px;
+        border-radius:toRem(50);
+        font-size:toRem(14);
         color :$white;
         position: absolute;
-        left:-10px;		
+        left:toRem(-10);		
     }
     &:hover{
         background:$filters-hover ;

@@ -2,7 +2,7 @@
     @include flex-direction ($direction:row ,$justify-c:space-between, $align-i:center);
     &--desktop{
         @include desktop{
-            @include flex-direction ($direction:row ,$justify-c:center, $align-i:center);
+            justify-content: center;
             gap:toRem(24);
         }
     }   

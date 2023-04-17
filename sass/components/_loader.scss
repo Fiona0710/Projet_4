@@ -12,7 +12,8 @@
         @include anim($key:rotate, $dur:3s);
             width: toRem(350);
             height: toRem(350);
-            border:toRem(28) dotted;
+            border-width:toRem(20) ;
+            border-style: dotted;
             border-top-color: $primary;
             border-bottom-color: $secondary ;
             border-left-color: $light-primary;
@@ -21,7 +22,6 @@
             margin: auto;
             background:$lighter-bg;
         @include desktop{
-            border-width:toRem(29);
             width: toRem(500);
             height: toRem(500);
         }

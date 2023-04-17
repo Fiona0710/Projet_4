@@ -203,10 +203,7 @@ a {
 }
 @media only screen and (min-width:768.1px) {
   .like--desktop {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 1.5rem;
   }
 }
@@ -556,7 +553,8 @@ a {
   animation: rotate 3s ease-in-out both;
   width: 21.875rem;
   height: 21.875rem;
-  border: 1.75rem dotted;
+  border-width: 1.25rem;
+  border-style: dotted;
   border-top-color: hsl(267, 66%, 60%);
   border-bottom-color: hsl(317, 100%, 74%);
   border-left-color: hsl(282, 77%, 64%);
@@ -567,7 +565,6 @@ a {
 }
 @media only screen and (min-width:768.1px) {
   .wrapper-loader .loader {
-    border-width: 1.8125rem;
     width: 31.25rem;
     height: 31.25rem;
   }

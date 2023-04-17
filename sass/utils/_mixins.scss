@@ -62,4 +62,11 @@
     @media #{$breakpoint-screen-large}{
         @content;
     }
-} 
+}
+
+// Media queries for desktop X-Large //
+@mixin desktop-xl{
+    @media #{$breakpoint-screen-xl-large}{
+        @content;
+    }
+}

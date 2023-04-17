@@ -10,6 +10,10 @@
         margin-left:13.5% ;
         margin-right:13.5% ;
     }
+    @include desktop-xl{
+         width: min(90rem, 100%);
+         margin: auto;
+    }
     &_leading{
         font-family: 'Shrikhand';
         font-size:toRem(28);

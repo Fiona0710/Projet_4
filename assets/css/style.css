@@ -172,25 +172,27 @@ a {
 .operation, .eatery {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 @media only screen and (min-width:768.1px) {
   .operation, .eatery {
     padding-left: 12.5%;
     padding-right: 12.5%;
+    align-items: center;
   }
 }
 
-.width-max {
-  width: 100%;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.width-max_footer {
-  flex-direction: row-reverse;
-  align-items: center;
+@media only screen and (min-width:768.1px) {
+  .width-max {
+    width: min(90rem, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .width-max_footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
 .like {
@@ -414,6 +416,12 @@ a {
   .eatery-menu {
     margin-left: 13.5%;
     margin-right: 13.5%;
+  }
+}
+@media only screen and (min-width:1440.1px) {
+  .eatery-menu {
+    width: min(90rem, 100%);
+    margin: auto;
   }
 }
 .eatery-menu_leading {

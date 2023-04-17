@@ -32,18 +32,20 @@
     } 
 }    
 .operation , .eatery{
-    @include flex-direction($align-i:center);
+    @include flex-direction;
     @include desktop{
         padding-left:12.5%;
-        padding-right:12.5%;  
+        padding-right:12.5%;
+        align-items: center;  
     }
 }
 
 .width-max{
-    width: 100%;
-    max-width:toRem(1440);
-    @include flex-direction($align-i:stretch);
-    &_footer{
-        @include flex-direction($direction:row-reverse, $align-i:center);
+    @include desktop{
+        width: min(toRem(1440),100%);
+        @include flex-direction($align-i:stretch);
+        &_footer{
+            @include flex-direction($direction:row-reverse, $align-i:center);
+        }
     }
 }

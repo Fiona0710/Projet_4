@@ -5,16 +5,23 @@
     z-index: 1;
     position:relative;
     @include box-shadow($offset-y:toRem(2),$blur:toRem(4),$color:rgba(0, 0, 0, 0.15));
+    @include desktop{
+        padding-top:toRem(30) ;
+        padding-bottom:toRem(20);
+    }
     &_arrow{
         position: absolute;
         left:toRem(23);
-        top:toRem(24);
+        top:40%;
+        font-size: toRem(20);
     }
     &_heading{
         display:inline-flex;
         width:toRem(162); 
-        height:toRem(44); 
-       
+        height:toRem(44);
+        @include desktop{
+            width: toRem(200);
+            height: toRem(34.2);
+        }   
     }
-
 }

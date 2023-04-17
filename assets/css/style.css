@@ -94,15 +94,28 @@
   border: none;
   font-size: 1rem;
 }
+@media only screen and (min-width:768.1px) {
+  .header {
+    padding-top: 1.875rem;
+    padding-bottom: 1.25rem;
+  }
+}
 .header_arrow {
   position: absolute;
   left: 1.4375rem;
-  top: 1.5rem;
+  top: 40%;
+  font-size: 1.25rem;
 }
 .header_heading {
   display: inline-flex;
   width: 10.125rem;
   height: 2.75rem;
+}
+@media only screen and (min-width:768.1px) {
+  .header_heading {
+    width: 12.5rem;
+    height: 2.1375rem;
+  }
 }
 
 *,

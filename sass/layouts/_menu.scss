@@ -6,13 +6,10 @@
     background-color:$lighter-bg;
     height: auto;
     overflow: hidden;
+    width: 100%;
     @include desktop{
-        margin-left:13.5% ;
-        margin-right:13.5% ;
-    }
-    @include desktop-xl{
-         width: min(90rem, 100%);
-         margin: auto;
+        max-width:toRem(1055);
+        @include flex-direction($align-i:center);
     }
     &_leading{
         font-family: 'Shrikhand';
@@ -24,8 +21,7 @@
         @include flex-direction;
             gap:toRem(12) ;
         @include desktop{
-            margin-left:20% ;
-            margin-right:20% ;
+            width:min(toRem(634), 100%) ;
         }
     }
     &_part{

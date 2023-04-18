@@ -34,18 +34,12 @@
 .operation , .eatery{
     @include flex-direction;
     @include desktop{
-        padding-left:12.5%;
-        padding-right:12.5%;
         align-items: center;  
     }
 }
 
 .width-max{
     @include desktop{
-        width: min(toRem(1440),100%);
-        @include flex-direction($align-i:stretch);
-        &_footer{
-            @include flex-direction($direction:row-reverse, $align-i:center);
-        }
+        width: min(toRem(1055), 100%);
     }
 }

@@ -9,12 +9,6 @@
         padding-top:toRem(30) ;
         padding-bottom:toRem(20);
     }
-    &_arrow{
-        position: absolute;
-        left:toRem(23);
-        top:40%;
-        font-size: toRem(20);
-    }
     &_heading{
         display:inline-flex;
         width:toRem(162); 

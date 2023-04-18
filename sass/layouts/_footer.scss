@@ -2,7 +2,7 @@
     background: $darker-bg;
     padding:toRem(22) toRem(25);
     @include desktop{
-        @include flex-direction($justify-c:center, $align-i:center);
+        @include flex-direction($direction:row-reverse, $align-i:center);
         padding:toRem(64) toRem(57) toRem(30);
     }
     & , a{
@@ -31,7 +31,7 @@
     &_list{
         @include list;
         @include desktop{
-            @include flex-direction($direction:null ,$justify-c:center);
+            @include flex-direction($direction:row ,$justify-c:flex-end);
             flex-wrap:wrap ;
             gap: toRem(10);
         }   

@@ -1,6 +1,7 @@
 # Improve the interface of a mobile site with CSS animations
 
 Tools: HTML5, CSS3, SASS
+
 Methods: sass-7-1 architecture, BEM selectors, nesting
 
 Website : Ohmyfood (Paris)

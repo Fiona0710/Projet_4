@@ -53,20 +53,13 @@
 }
 
 // Customizable mixin for transition //
-@mixin trans($property:all, $dur:400ms, $delay:null, $timming:ease-in-out ){
-    transition:$property, $dur, $delay, $timming;
+@mixin trans($property:all, $dur:400ms, $delay:null, $timming:ease-in-out){
+    transition:$property $dur $delay $timming;
 }
 
 // Media queries for desktop //
 @mixin desktop{
     @media #{$breakpoint-screen-large}{
-        @content;
-    }
-}
-
-// Media queries for desktop X-Large //
-@mixin desktop-xl{
-    @media #{$breakpoint-screen-xl-large}{
         @content;
     }
 }

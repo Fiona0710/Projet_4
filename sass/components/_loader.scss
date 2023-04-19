@@ -43,7 +43,7 @@
     transform:translate(-50%, -50%);
     @for $i from 1 through 9 {
         & path:nth-child(#{$i}){
-            @include anim($key:svg, $dur:2.8s);
+            @include anim($key:svg, $dur:3s);
             stroke-dasharray:toRem(200);
             stroke-dashoffset:toRem(200);
             fill-opacity:0;

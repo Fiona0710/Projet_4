@@ -37,7 +37,7 @@
 }
 
 // Customizable loop to display several cascading elements //
-@mixin progress($from:2, $through:4, $delay:500ms, $tr-or:left, ){
+@mixin progress($from:2, $through:5, $delay:500ms, $tr-or:left, ){
     @for $i from $from through $through{
         &:nth-child(#{$i}) { 
             animation-delay:($i *$delay);
